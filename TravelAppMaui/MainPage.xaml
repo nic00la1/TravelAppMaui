@@ -5,29 +5,49 @@
              Shell.NavBarIsVisible="False">
 
 
-    <Grid RowDefinitions="*,*">
-        <VerticalStackLayout>
-                <Image
+    <Grid RowDefinitions="*,*,*">
+        <VerticalStackLayout Padding="20">
+            <Image
                  Source="landing_page.jpg"
-                 Aspect="AspectFill"/>
+                 Aspect="AspectFill">
+                <Image.Shadow>
+                    <Shadow Brush="White"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.8" />
+                </Image.Shadow>
+            </Image>
+            
             </VerticalStackLayout>
 
         <VerticalStackLayout Grid.Row="1"
-                             Spacing="20">
+                             VerticalOptions="Center">
             <Label
-             Text="Planning Your"
-             Style="{StaticResource Headline}"/>
+             Text="Planning Your Next Vacation"
+                FontSize="40"
+                HorizontalOptions="Center"
+                Margin="20"/>
 
             <Label
-             Text="Next Vacation"
-             Style="{StaticResource Headline}"
-             Margin="-20"/>
+             Text="Embark on your next adventure with us - where dreams meet destinations, and every click brings you closer to paradise!"
+                FontSize="14"
+                
+                HorizontalOptions="CenterAndExpand"
+                Padding="20"
+                Margin="10,0,10,0"/>
 
+           
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="2"
+                             VerticalOptions="Center">
             <Button
-                 x:Name="CounterBtn"
-                 Text="Explore Now"
-                 VerticalOptions="End"
-                 HorizontalOptions="Center"/>
+              x:Name="CounterBtn"
+              Text="Explore Now"
+                FontAttributes="Bold"
+              HorizontalOptions="Center"
+                BackgroundColor="#F4BB44"
+                Padding="50,15"/>
         </VerticalStackLayout>
         
 

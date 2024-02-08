@@ -59,9 +59,11 @@
 	  <None Remove="Resources\Images\alps.jpg" />
 	  <None Remove="Resources\Images\avatar1.jpg" />
 	  <None Remove="Resources\Images\beach.jpg" />
+	  <None Remove="Resources\Images\bike_trial.jpg" />
 	  <None Remove="Resources\Images\camping.jpg" />
 	  <None Remove="Resources\Images\camping_boat.jpg" />
 	  <None Remove="Resources\Images\camping_night.jpg" />
+	  <None Remove="Resources\Images\cyclist.png" />
 	  <None Remove="Resources\Images\freedom.jpg" />
 	  <None Remove="Resources\Images\landing_page.jpg" />
 	  <None Remove="Resources\Images\tourist_campings_concept.jpg" />
