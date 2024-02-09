@@ -65,11 +65,16 @@
 	  <None Remove="Resources\Images\camping_night.jpg" />
 	  <None Remove="Resources\Images\cyclist.png" />
 	  <None Remove="Resources\Images\freedom.jpg" />
+	  <None Remove="Resources\Images\haleakala.jpg" />
+	  <None Remove="Resources\Images\lahaina.jpg" />
 	  <None Remove="Resources\Images\landing_page.jpg" />
+	  <None Remove="Resources\Images\molokini.jpg" />
+	  <None Remove="Resources\Images\roadtohana.jpg" />
 	  <None Remove="Resources\Images\tourist_campings_concept.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
