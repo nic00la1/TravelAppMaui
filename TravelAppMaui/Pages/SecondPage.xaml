@@ -82,7 +82,7 @@
                     FontSize="Medium" 
                     BackgroundColor="#009de0" 
                     Grid.Row="1"  
-                    Margin="20"
+                    Margin="0,0,30,10"
                     VerticalOptions="Center"/>
         </Grid>
     </Grid>
