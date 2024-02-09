@@ -11,6 +11,10 @@ namespace TravelAppMaui
             BindingContext = mainPageViewModel;
         }
 
+        private async void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
+        {
+            await Shell.Current.GoToAsync("//Second");
+        }
     }
 
 }
