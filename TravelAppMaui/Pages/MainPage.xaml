@@ -7,63 +7,50 @@
              x:DataType="viewmodel:MainPageViewModel">
 
 
-    <VerticalStackLayout>
+    <VerticalStackLayout VerticalOptions="Center">
         <Grid RowDefinitions="*">
             <CarouselView ItemsSource="{Binding CarouselItems}" IndicatorView="indicatorView" Loop="False">
                 <CarouselView.ItemTemplate>
                     <DataTemplate x:DataType="viewmodel:CarouselItem">
                         <Grid RowDefinitions=".6*,.5*" RowSpacing="100">
-                            <Image Source="{Binding Image}" WidthRequest="250" HeightRequest="350" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"></Image>
-                            <VerticalStackLayout Grid.Row="1" Spacing="10" Margin="0,50,0,0">
-                                <Label Text="{Binding Title}" FontSize="Title"></Label>
-                                <Label Text="{Binding Description}" FontSize="Default"></Label>
-                            </VerticalStackLayout>
+                            <Image Source="{Binding Image}"
+                                   WidthRequest="320"
+                                    HeightRequest="300"
+                                   VerticalOptions="StartAndExpand"
+                                   HorizontalOptions="CenterAndExpand"/>
                         </Grid>
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>
         </Grid>
 
-        <IndicatorView x:Name="indicatorView" VerticalOptions="CenterAndExpand" IndicatorColor="Brown" IndicatorSize="12" SelectedIndicatorColor="Green"></IndicatorView>
+        <!-- === IndicatorView === -->
+        <IndicatorView x:Name="indicatorView"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                IndicatorColor="#d3d3d3"
+                IndicatorSize="9"
+                SelectedIndicatorColor="#009de0"
+                       Margin="20"/>
 
-        <Button Text="Next" WidthRequest="100"  HorizontalOptions="End"  Margin="10,150,10,0"></Button>
+        <Label Text="Planning Your Next Vacation"
+               HorizontalOptions="CenterAndExpand"
+               FontSize="53"
+               FontFamily="Regular"
+               FontAttributes="Bold"
+               Margin="68,20"/>
+               
+
+        <Button Text="Explore now!"
+                HorizontalOptions="Center"
+                Padding="25, 10"
+                FontFamily="Regular"
+                FontSize="Medium"
+                BackgroundColor="#009de0"
+                Margin="0,60"/>
     </VerticalStackLayout>
 
-
-
-    <!--<Grid RowDefinitions=".2*,.2*,.1*">
-        --><!-- Here will be Carousel --><!--
+    
         
-        
-
-        <VerticalStackLayout Grid.Row="1"
-                             VerticalOptions="Center">
-            <Label
-             Text="Planning Your Next Vacation"
-                FontSize="40"
-                HorizontalOptions="Center"
-                Margin="20"/>
-
-            <Label
-             Text="Embark on your next adventure with us - where dreams meet destinations, and every click brings you closer to paradise!"
-                FontSize="14"
-                
-                HorizontalOptions="CenterAndExpand"
-                Padding="20"
-                Margin="10,0,10,0"/>
-
-
-        </VerticalStackLayout>
-
-        <VerticalStackLayout Grid.Row="2"
-                             VerticalOptions="Center">
-            <Button
-              x:Name="CounterBtn"
-              Text="Explore Now"
-                FontAttributes="Bold"
-              HorizontalOptions="Center"
-                BackgroundColor="#F4BB44"
-                Padding="50,15"/>
-        </VerticalStackLayout>
-    </Grid>-->
+   
 </ContentPage>
