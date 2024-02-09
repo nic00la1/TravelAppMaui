@@ -6,6 +6,12 @@
              Title="SecondPage"
              Shell.NavBarIsVisible="False">
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:String x:Key="bell">&#xf0f3;</x:String>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <Grid Margin="10,10,10,0" RowDefinitions=".1*, .35*, .05*, .25*, .15*, .1*">
         <Grid ColumnDefinitions="*, *">
             
@@ -22,18 +28,18 @@
                     WidthRequest="75" />
             </Border>
             <VerticalStackLayout VerticalOptions="Center"
-                                 Grid.Column="1">
-                <Rectangle
-        Fill="#009de0"
-        HeightRequest="2"
-        HorizontalOptions="End"
-        WidthRequest="25" />
-                <Rectangle
-        Margin="0,5,0,0"
-        Fill="#009de0"
-        HeightRequest="2"
-        HorizontalOptions="End"
-        WidthRequest="35" />
+                                 HorizontalOptions="End"
+                                 Grid.Column="1"
+                                 Margin="10,0,10,0">
+                <Image>
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="FAR"
+                            Glyph="{StaticResource bell}"
+                            Size="40"
+                            Color="Black"/>
+                    </Image.Source>
+                </Image>
             </VerticalStackLayout>
         </Grid>
     </Grid>

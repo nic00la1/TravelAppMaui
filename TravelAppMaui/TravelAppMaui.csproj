@@ -57,6 +57,9 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\boogaloo.regular.ttf" />
+	  <None Remove="Resources\Fonts\Brands-Regular-400.otf" />
+	  <None Remove="Resources\Fonts\Free-Regular-400.otf" />
+	  <None Remove="Resources\Fonts\Free-Solid-900.otf" />
 	  <None Remove="Resources\Images\alps.jpg" />
 	  <None Remove="Resources\Images\avatar1.jpg" />
 	  <None Remove="Resources\Images\beach.jpg" />
