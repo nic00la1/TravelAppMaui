@@ -10,6 +10,9 @@
         <ResourceDictionary>
             <x:String x:Key="bell">&#xf0f3;</x:String>
         </ResourceDictionary>
+        <ResourceDictionary>
+            <x:String x:Key="arrow">&#xf061;</x:String>
+        </ResourceDictionary>
     </ContentPage.Resources>
 
     <Grid Margin="10,10,10,0" RowDefinitions=".1*, .35*, .05*, .25*, .15*, .1*">
@@ -66,7 +69,7 @@
             </Border>
             
 
-            <!-- Prostokątna ramka z dwoma etykietami -->
+            <!-- Frame with Labels -->
             <Frame BackgroundColor="White" CornerRadius="10" Padding="10" Grid.Row="1" Margin="15,0,15,8" Grid.Column="0">
                 <StackLayout Orientation="Horizontal">
                     <StackLayout>
@@ -76,10 +79,12 @@
                 </StackLayout>
             </Frame>
 
-            <!-- Przycisk strzałki -->
-            <Button Text="→" 
+            <!-- Arrow Button -->
+            <Button Text="{StaticResource arrow}"
+                    TextColor="White"
                     HorizontalOptions="End" 
-                    FontSize="Medium" 
+                    FontFamily="FAS"
+                    FontSize="Large"
                     BackgroundColor="#009de0" 
                     Grid.Row="1"  
                     Margin="0,0,30,10"
