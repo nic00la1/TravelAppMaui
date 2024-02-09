@@ -60,10 +60,14 @@
         </Grid>
         <Grid Grid.Row="1" Margin="15,20,15,0" RowDefinitions="*, Auto, 10">
             <!-- Image -->
-            <Image Aspect="AspectFill" Source="beach.jpg" Grid.RowSpan="3" Grid.Row="0"/>
+            <Border Grid.RowSpan="3" Stroke="#C49B33" StrokeThickness="5"
+                     StrokeShape="RoundRectangle 20,20,20,20">
+                <Image Aspect="AspectFill" Source="beach.jpg"  Grid.Row="0"/>
+            </Border>
+            
 
             <!-- Prostokątna ramka z dwoma etykietami -->
-            <Frame BackgroundColor="White" CornerRadius="10" Padding="10" Grid.Row="1" Margin="2" Grid.Column="0">
+            <Frame BackgroundColor="White" CornerRadius="10" Padding="10" Grid.Row="1" Margin="15,0,15,8" Grid.Column="0">
                 <StackLayout Orientation="Horizontal">
                     <StackLayout>
                         <Label Text="Start Your Adventure" TextColor="Black" FontAttributes="Bold" FontSize="Large"/>
