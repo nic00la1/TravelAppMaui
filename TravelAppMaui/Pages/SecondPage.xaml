@@ -3,14 +3,44 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TravelAppMaui.Pages.SecondPage"
              xmlns:pages="clr-namespace:TravelAppMaui.Pages"
-             Title="SecondPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="SecondPage"
+             Shell.NavBarIsVisible="False">
 
-        <Button Text="Wroc"
+    <Grid Margin="10,10,10,0" RowDefinitions=".1*, .35*, .05*, .25*, .15*, .1*">
+        <Grid ColumnDefinitions="*, *">
+            
+            <Border
+                HeightRequest="75"
+                HorizontalOptions="Start"
+                StrokeShape="RoundRectangle 100,100,100 100"
+                WidthRequest="75">
+                <Image
+                    Aspect="AspectFill"
+                    HeightRequest="75"
+                    HorizontalOptions="Center"
+                    Source="avatar1.jpg"
+                    WidthRequest="75" />
+            </Border>
+            <VerticalStackLayout VerticalOptions="Center"
+                                 Grid.Column="1">
+                <Rectangle
+        Fill="#009de0"
+        HeightRequest="2"
+        HorizontalOptions="End"
+        WidthRequest="25" />
+                <Rectangle
+        Margin="0,5,0,0"
+        Fill="#009de0"
+        HeightRequest="2"
+        HorizontalOptions="End"
+        WidthRequest="35" />
+            </VerticalStackLayout>
+        </Grid>
+    </Grid>
+
+    <!--<VerticalStackLayout>
+        --><!-- ===Button=== --><!--
+        <Button Text="Return"
         HorizontalOptions="Center"
         Padding="25, 10"
         FontFamily="Regular"
@@ -21,5 +51,6 @@
                 <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
             </Button.GestureRecognizers>
         </Button>
-    </VerticalStackLayout>
+        --><!--= = = = = =--><!--
+    </VerticalStackLayout>-->
 </ContentPage>
