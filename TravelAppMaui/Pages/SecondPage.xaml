@@ -10,13 +10,11 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <x:String x:Key="bell">&#xf0f3;</x:String>
-        </ResourceDictionary>
-        <ResourceDictionary>
             <x:String x:Key="arrow">&#xf061;</x:String>
-        </ResourceDictionary>
-        <ResourceDictionary>
             <x:String x:Key="star">&#xf005;</x:String>
+            <x:String x:Key="pin">&#xf3c5;</x:String>
         </ResourceDictionary>
+        
     </ContentPage.Resources>
 
     <Grid Margin="10,10,10,0" RowDefinitions=".1*, .35*, .05*, .25*, .15*, .1*">
@@ -154,7 +152,7 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        <Grid Grid.Row="4" ColumnDefinitions="*,*" HeightRequest="100"
+        <Grid Grid.Row="4" ColumnDefinitions=".75*,*" HeightRequest="100"
               BackgroundColor="White"
               Margin="35,0,0,0"
               VerticalOptions="Center" 
@@ -168,12 +166,33 @@
                 </Grid>
             </Border>
             <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center"
-                                 Margin="0,20,0,0">
-                <Label Text="Mountain Climbing"
-                       FontAttributes="Bold"/>
-                <Label Text="{StaticResource star}"
-                        FontFamily="FAS"
-                       TextColor="#ffe234"/>
+                                 Margin="0,20,-20,0">
+                <Label Text="Mountain Climbing" 
+                            FontAttributes="Bold"
+                       FontSize="20"
+                       FontFamily="Regular"/>
+                <Grid ColumnDefinitions="*,*,*,*" Margin="-20,10,-20,0" HorizontalOptions="CenterAndExpand">
+                    <Label Text="{StaticResource pin}"
+                           FontFamily="FAS"
+                           TextColor="#B33F40"
+                           FontSize="16"
+                           Margin="25,0"/>
+                    
+                    <Label Text="Switzerland" Grid.Column="1"
+                           FontAttributes="Bold"
+                           FontFamily="Regular"
+                           TextColor="#424242"
+                           FontSize="16"
+                           Margin="-25,0,23,0"/>
+                    
+                    <Label Text="{StaticResource star}" Grid.Column="2"
+                            FontFamily="FAS"
+                           FontSize="16"
+                           TextColor="#ffe234"
+                           Margin="5,0,2,0"/>
+                    <Label Text="4.8" Grid.Column="3"
+                           Margin="0,0,10,0"/>
+                </Grid>
             </VerticalStackLayout>
         </Grid>
     </Grid>
