@@ -4,7 +4,8 @@
              x:Class="TravelAppMaui.MainPage"
              Shell.NavBarIsVisible="False"
              xmlns:viewmodel="clr-namespace:TravelAppMaui.Models"
-             x:DataType="viewmodel:MainPageViewModel">
+             x:DataType="viewmodel:MainPageViewModel"
+             BackgroundColor="#FAF9F6">
 
 
     <VerticalStackLayout VerticalOptions="Center">
