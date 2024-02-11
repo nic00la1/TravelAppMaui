@@ -12,12 +12,14 @@
             <CarouselView ItemsSource="{Binding CarouselItems}" IndicatorView="indicatorView" Loop="False">
                 <CarouselView.ItemTemplate>
                     <DataTemplate x:DataType="viewmodel:CarouselItem">
-                        <Grid RowDefinitions=".6*,.5*" RowSpacing="100">
-                            <Image Source="{Binding Image}"
-                                   WidthRequest="320"
-                                    HeightRequest="300"
-                                   VerticalOptions="StartAndExpand"
-                                   HorizontalOptions="CenterAndExpand"/>
+                        <Grid RowDefinitions=".6*,.5*" RowSpacing="120">
+                            <Border StrokeShape="RoundRectangle 40" 
+                                    WidthRequest="320"
+                                    HeightRequest="300" 
+                                    VerticalOptions="StartAndExpand"
+                                    HorizontalOptions="CenterAndExpand">
+                                <Image Source="{Binding Image}"/>
+                            </Border>
                         </Grid>
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
