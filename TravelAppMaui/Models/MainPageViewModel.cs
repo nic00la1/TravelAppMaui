@@ -37,5 +37,6 @@ namespace TravelAppMaui.Models
                 Image = "molokini.jpg"
             });
         }
+
     }
 }

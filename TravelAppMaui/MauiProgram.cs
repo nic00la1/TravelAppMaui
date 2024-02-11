@@ -23,8 +23,10 @@ namespace TravelAppMaui
 
 
                 });
+            builder.Services.AddSingleton<SecondPageViewModel>();
             builder.Services.AddSingleton<MainPageViewModel>();
             builder.Services.AddSingleton<MainPage>();
+
 
 
 #if DEBUG
