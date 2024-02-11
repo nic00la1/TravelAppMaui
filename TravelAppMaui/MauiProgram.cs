@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using TravelAppMaui.Models;
+using TravelAppMaui.Pages;
 
 namespace TravelAppMaui
 {
@@ -26,6 +27,7 @@ namespace TravelAppMaui
             builder.Services.AddSingleton<SecondPageViewModel>();
             builder.Services.AddSingleton<MainPageViewModel>();
             builder.Services.AddSingleton<MainPage>();
+            builder.Services.AddSingleton<SecondPage>();
 
 
 

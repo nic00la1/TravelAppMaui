@@ -1,15 +1,19 @@
-namespace TravelAppMaui.Pages;
+using TravelAppMaui.Models;
 
-public partial class SecondPage : ContentPage
+namespace TravelAppMaui.Pages
 {
-    public SecondPage()
+    public partial class SecondPage : ContentPage
     {
-        InitializeComponent();
-    }
+        public SecondPage(SecondPageViewModel secondPageViewModel)
+        {
+            InitializeComponent();
+            BindingContext = secondPageViewModel;
+        }
 
-    private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
-    {
-        await Shell.Current.GoToAsync("//MainPage");
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("//MainPage");
+        }
     }
-
 }
+

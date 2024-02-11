@@ -6,7 +6,7 @@
              Title="SecondPage"
              Shell.NavBarIsVisible="False"
              BackgroundColor="#FAF9F6">
-
+    
     <ContentPage.Resources>
         <ResourceDictionary>
             <x:String x:Key="bell">&#xf0f3;</x:String>
@@ -105,78 +105,16 @@
                    TextColor="#424242"
                    />
         </Grid>
-        <StackLayout Grid.Row="3">
-
-            <StackLayout Orientation="Horizontal">
-
-                <Label Text="Art of the day"
-                   Margin="8,8,8,0"
-                   FontSize="Medium"
-                   TextColor="Crimson"
-                   FontAttributes="Bold"/>
-
-                <Label HorizontalOptions="EndAndExpand"
-                   Text="See All"
-                   FontAttributes="Bold"
-                   Margin="0,8,8,0"
-                   FontSize="Medium"
-                   TextColor="Black"/>
-
-            </StackLayout>
-
-            <CollectionView ItemsSource="{Binding Pictures}"
-                        VerticalOptions="Start"
-                        ItemsLayout="HorizontalList">
-
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-
-                        <Grid Padding="10" Margin="12">
-
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="1*" />
-                            </Grid.RowDefinitions>
-
-                            <Image Source="{Binding ImageUrl}"
-                               Grid.Row="0"
-                               VerticalOptions="Start"
-                               WidthRequest="220"
-                               HorizontalOptions="Start"
-                               HeightRequest="250"
-                               Aspect="AspectFill" />
-
-                            <StackLayout Grid.Row="1"
-                                     Margin="6">
-
-                                <Label Grid.Column="1"
-                                   VerticalOptions="Center"
-                                   Text="{Binding Name}"
-                                   FontAttributes="Bold" />
-
-
-                                <Label Text="{Binding ShortDescription}"
-                                   Grid.Row="1"
-                                   Grid.Column="1"
-                                   VerticalOptions="Start"
-                                   FontAttributes="Italic" />
-                            </StackLayout>
-
-                        </Grid>
-
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </StackLayout>
-        <!--<CollectionView Grid.Row="3" ItemsLayout="HorizontalList" Margin="5, 20">
+        <CollectionView Grid.Row="3" ItemsLayout="HorizontalList" Margin="5, 20"
+                        ItemsSource="{Binding CollectionItems}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Border Margin="10,0" WidthRequest="210" Background="White">
+                    <Border Margin="10,0" WidthRequest="210">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="12" />
                         </Border.StrokeShape>
                         <Grid>
-                            <Image HeightRequest="200" Source="alps.jpg" Aspect="AspectFill"/>
+                            <Image HeightRequest="200" Source="{Binding Image}" Aspect="AspectFill"/>
                             <Grid RowDefinitions="28, *, 20, 40">
                                 <Border
                                     Margin="0,0,14,0"
@@ -190,7 +128,7 @@
                                     <Label
                                         FontAttributes="Bold"
                                         HorizontalOptions="Center"
-                                        Text="-25%"
+                                        Text="{Binding Price}"
                                         TextColor="White"
                                         VerticalOptions="Center" />
                                 </Border>
@@ -199,26 +137,19 @@
                                     Padding="10,0,0,-2"
                                     FontAttributes="Bold"
                                     FontSize="17"
-                                    Text="Boat Camping"
+                                    Text="{Binding Title}"
                                     TextColor="Black" />
                                 <Label
                                     Grid.Row="3"
                                     Padding="10"
                                     FontAttributes="Bold"
-                                    Text="Lake Como, Italy."
+                                    Text="{Binding Place}"
                                     TextColor="Black" />
                             </Grid>
                         </Grid>
                     </Border>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
-            <CollectionView.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>test</x:String>
-                    <x:String>test</x:String>
-                    <x:String>test</x:String>
-                </x:Array>
-            </CollectionView.ItemsSource>
-        </CollectionView>-->
+        </CollectionView>
     </Grid>
 </ContentPage>
