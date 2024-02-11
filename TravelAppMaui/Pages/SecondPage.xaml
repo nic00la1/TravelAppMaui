@@ -5,7 +5,7 @@
              xmlns:pages="clr-namespace:TravelAppMaui.Pages"
              Title="SecondPage"
              Shell.NavBarIsVisible="False"
-             BackgroundColor="#FAF9F6">
+             BackgroundColor="#FAF6F9">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -13,6 +13,9 @@
         </ResourceDictionary>
         <ResourceDictionary>
             <x:String x:Key="arrow">&#xf061;</x:String>
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <x:String x:Key="star">&#xf005;</x:String>
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -152,6 +155,7 @@
             </CollectionView.ItemTemplate>
         </CollectionView>
         <Grid Grid.Row="4" ColumnDefinitions="*,*" HeightRequest="100"
+              BackgroundColor="White"
               Margin="35,0,0,0"
               VerticalOptions="Center" 
               ColumnSpacing="10">
@@ -167,6 +171,9 @@
                                  Margin="0,20,0,0">
                 <Label Text="Mountain Climbing"
                        FontAttributes="Bold"/>
+                <Label Text="{StaticResource star}"
+                        FontFamily="FAS"
+                       TextColor="#ffe234"/>
             </VerticalStackLayout>
         </Grid>
     </Grid>

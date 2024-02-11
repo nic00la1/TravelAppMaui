@@ -60,6 +60,11 @@
 	  <None Remove="Resources\Fonts\Brands-Regular-400.otf" />
 	  <None Remove="Resources\Fonts\Free-Regular-400.otf" />
 	  <None Remove="Resources\Fonts\Free-Solid-900.otf" />
+	  <None Remove="Resources\Fonts\home.eot" />
+	  <None Remove="Resources\Fonts\home.svg" />
+	  <None Remove="Resources\Fonts\home.ttf" />
+	  <None Remove="Resources\Fonts\home.woff" />
+	  <None Remove="Resources\Fonts\home.woff2" />
 	  <None Remove="Resources\Images\alps.jpg" />
 	  <None Remove="Resources\Images\avatar1.jpg" />
 	  <None Remove="Resources\Images\beach.jpg" />
