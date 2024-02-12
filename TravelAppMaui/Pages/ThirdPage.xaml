@@ -7,9 +7,13 @@
     <Grid RowDefinitions=".7*,*" RowSpacing="-100">
         <Image Source="camping_boat.jpg" Aspect="AspectFill"/>
         <Border Grid.Row="1" StrokeShape="RoundRectangle 50,50,0,0" BackgroundColor="White">
-            <Grid >
-                <VerticalStackLayout Margin="30">
-                    <Label Text="Boat Camping"
+            <Grid RowDefinitions=".05*, .2*, .3*, .1*, .25*, .1*, .4*">
+                <VerticalStackLayout Margin="30,10">
+                    <Border StrokeThickness="3" StrokeShape="RoundRectangle 10" VerticalOptions="Start"
+                            BackgroundColor="#494949"
+                            WidthRequest="47"/>
+                    <Label Grid.Row="1" Margin="0,15,0,0"
+                        Text="Boat Camping"
                            FontSize="30" 
                            HorizontalOptions="Start"
                            FontAttributes="Bold"
