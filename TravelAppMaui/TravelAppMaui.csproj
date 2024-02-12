@@ -67,6 +67,7 @@
 	  <None Remove="Resources\Fonts\home.woff2" />
 	  <None Remove="Resources\Images\alps.jpg" />
 	  <None Remove="Resources\Images\avatar1.jpg" />
+	  <None Remove="Resources\Images\avatar2.jpg" />
 	  <None Remove="Resources\Images\beach.jpg" />
 	  <None Remove="Resources\Images\bike_trial.jpg" />
 	  <None Remove="Resources\Images\camping.jpg" />
