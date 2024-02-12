@@ -4,23 +4,64 @@
              x:Class="TravelAppMaui.Pages.ThirdPage"
              Title="ThirdPage"
              Shell.NavBarIsVisible="False">
+    
+    <!--#region Icons-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:String x:Key="star">&#xf005;</x:String>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <!--#endregion-->
+    
     <Grid RowDefinitions=".7*,*" RowSpacing="-100">
         <Image Source="camping_boat.jpg" Aspect="AspectFill"/>
         <Border Grid.Row="1" StrokeShape="RoundRectangle 50,50,0,0" BackgroundColor="White">
             <Grid RowDefinitions=".05*, .2*, .3*, .1*, .25*, .1*, .4*">
-                <VerticalStackLayout Margin="30,10">
+                <!--#region Header-->
+                <VerticalStackLayout Margin="20,10" >
+                    <!--#region Ala-Wysuwany-Sheep-->
                     <Border StrokeThickness="3" StrokeShape="RoundRectangle 10" VerticalOptions="Start"
-                            BackgroundColor="#494949"
-                            WidthRequest="47"/>
-                    <Label Grid.Row="1" Margin="0,15,0,0"
-                        Text="Boat Camping"
-                           FontSize="30" 
-                           HorizontalOptions="Start"
-                           FontAttributes="Bold"
-                           FontFamily="Regular"/>
+            BackgroundColor="#494949"
+            WidthRequest="47"/>
+                    <!--#endregion-->
+                    <Grid Grid.Row="1" ColumnDefinitions=".7*, .4*" Margin="0,10,0,0">
+                        <Label
+                         Text="Boat Camping"
+                            FontSize="30" 
+                            HorizontalOptions="Start"
+                            FontAttributes="Bold"
+                            FontFamily="Regular"/>
+                        <Label Text="{StaticResource star}"
+                               TextColor="#ffe234" Margin="0,35,0,0"
+                               FontFamily="FAS"
+                               VerticalOptions="Center"
+                               FontSize="18"/>
+                        <Label  Text="4.5"
+                                TextColor="#494949"
+                                Margin="29,35,0,0"
+                                FontFamily="Regular"
+                                FontSize="20"/>
+                        
+                        <Label Grid.Column="1"
+                             Text="$15"
+                                TextColor="#53d769"
+                               FontFamily="Regular"
+                                HorizontalOptions="End"
+                                FontSize="30"
+                                FontAttributes="Bold"
+                        />
+                        <Label  Margin="0,35,0,0" Grid.Column="1"
+                                Text="Per Person"
+                                TextColor="#494949"
+                                FontSize="20"
+                                FontFamily="Regular"
+                                HorizontalOptions="End"
+                                FontAttributes="Bold"/>
+                    </Grid>
+                   
                 </VerticalStackLayout>
+                <!--#endregion-->
             </Grid>
-            
         </Border>
     </Grid>
 </ContentPage>
