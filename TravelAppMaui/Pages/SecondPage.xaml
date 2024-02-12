@@ -7,6 +7,7 @@
              Shell.NavBarIsVisible="False"
              BackgroundColor="#FAF6F9">
 
+    <!--#region Icons-->
     <ContentPage.Resources>
         <ResourceDictionary>
             <x:String x:Key="bell">&#xf0f3;</x:String>
@@ -15,59 +16,62 @@
             <x:String x:Key="pin">&#xf3c5;</x:String>
             <x:String x:Key="group">&#xf500;</x:String>
         </ResourceDictionary>
-        
     </ContentPage.Resources>
+    <!--#endregion-->
 
     <Grid Margin="10,10,10,0" RowDefinitions=".1*, .35*, .05*, .25*, .15*, .1*">
+        <!--#region Header-->
         <Grid ColumnDefinitions="*, *" Margin="5,0,5,0"
-              ColumnSpacing="-100">
+      ColumnSpacing="-100">
 
             <Border
-                HeightRequest="75"
-                HorizontalOptions="Start"
-                StrokeShape="RoundRectangle 100,100,100 100"
-                WidthRequest="75">
+        HeightRequest="75"
+        HorizontalOptions="Start"
+        StrokeShape="RoundRectangle 100,100,100 100"
+        WidthRequest="75">
                 <Image
-                    Aspect="AspectFill"
-                    HeightRequest="75"
-                    HorizontalOptions="Center"
-                    Source="avatar1.jpg"
-                    WidthRequest="75"/>
+            Aspect="AspectFill"
+            HeightRequest="75"
+            HorizontalOptions="Center"
+            Source="avatar1.jpg"
+            WidthRequest="75"/>
             </Border>
             <Label Text="Student"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Start"
-                   FontSize="24"
-                   FontFamily="Regular"
-                   Margin="-10,4,0,0"
-                   TextColor="#424242"/>
+           HorizontalOptions="Center"
+           VerticalOptions="Start"
+           FontSize="24"
+           FontFamily="Regular"
+           Margin="-10,4,0,0"
+           TextColor="#424242"/>
             <Label Text="Nicola Kaleta"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center"
-                   FontSize="24"
-                   FontFamily="Regular"
-                   FontAttributes="Bold"
-                   Margin="35,0,0,0"/>
+           HorizontalOptions="Center"
+           VerticalOptions="Center"
+           FontSize="24"
+           FontFamily="Regular"
+           FontAttributes="Bold"
+           Margin="35,0,0,0"/>
 
             <VerticalStackLayout VerticalOptions="Center"
-                                 HorizontalOptions="End"
-                                 Grid.Column="1"
-                                 Margin="10,0,10,0">
+                         HorizontalOptions="End"
+                         Grid.Column="1"
+                         Margin="10,0,10,0">
                 <Image>
                     <Image.Source>
                         <FontImageSource
-                            FontFamily="FAR"
-                            Glyph="{StaticResource bell}"
-                            Size="40"
-                            Color="Black"/>
+                    FontFamily="FAR"
+                    Glyph="{StaticResource bell}"
+                    Size="40"
+                    Color="Black"/>
                     </Image.Source>
                 </Image>
             </VerticalStackLayout>
         </Grid>
+        <!--#endregion-->
+        <!--#region MainImage-->
         <Grid Grid.Row="1" Margin="15,20,15,0" RowDefinitions="*, Auto, 10">
             <!-- Image -->
             <Border Grid.RowSpan="3" Stroke="#C49B33" StrokeThickness="5"
-                     StrokeShape="RoundRectangle 20,20,20,20">
+             StrokeShape="RoundRectangle 20,20,20,20">
                 <Image Aspect="AspectFill" Source="beach.jpg"  Grid.Row="0"/>
             </Border>
 
@@ -84,31 +88,35 @@
 
             <!-- Arrow Button -->
             <Button Text="{StaticResource arrow}"
-                    TextColor="White"
-                    HorizontalOptions="End" 
-                    FontFamily="FAS"
-                    FontSize="Large"
-                    BackgroundColor="#009de0" 
-                    Grid.Row="1"  
-                    Margin="0,0,30,10"
-                    VerticalOptions="Center"/>
+            TextColor="White"
+            HorizontalOptions="End" 
+            FontFamily="FAS"
+            FontSize="Large"
+            BackgroundColor="#009de0" 
+            Grid.Row="1"  
+            Margin="0,0,30,10"
+            VerticalOptions="Center"/>
         </Grid>
+        <!--#endregion-->
+        <!--#region Label-RecommendedPlaces -->
         <Grid Grid.Row="2" ColumnDefinitions="*,*"
-              Margin="15,20,15,0">
+       Margin="15,20,15,0">
             <Label Text="Recommended Places"
-                   FontSize="20"
-                   FontFamily="Regular"
-                   FontAttributes="Bold"/>
+            FontSize="20"
+            FontFamily="Regular"
+            FontAttributes="Bold"/>
 
             <Label Text="See All" Grid.Column="1"
-                   HorizontalTextAlignment="End"
-                   FontFamily="Regular"
-                   FontSize="20"
-                   TextColor="#424242"
-                   />
+            HorizontalTextAlignment="End"
+            FontFamily="Regular"
+            FontSize="20"
+            TextColor="#424242"
+            />
         </Grid>
+        <!--#endregion -->
+        <!--#region CollectionPlacesView-->
         <CollectionView Grid.Row="3" ItemsLayout="HorizontalList" Margin="5, 20"
-                        ItemsSource="{Binding CollectionItems}">
+                ItemsSource="{Binding CollectionItems}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Border Margin="10,0" WidthRequest="210">
@@ -119,45 +127,47 @@
                             <Image HeightRequest="200" Source="{Binding Image}" Aspect="AspectFill"/>
                             <Grid RowDefinitions="28, *, 20, 40">
                                 <Border
-                                    Margin="0,0,14,0"
-                                    BackgroundColor="#009de0"
-                                    HorizontalOptions="End"
-                                    StrokeThickness="0"
-                                    WidthRequest="55">
+                            Margin="0,0,14,0"
+                            BackgroundColor="#009de0"
+                            HorizontalOptions="End"
+                            StrokeThickness="0"
+                            WidthRequest="55">
                                     <Border.StrokeShape>
                                         <RoundRectangle CornerRadius="0,0,6,6" />
                                     </Border.StrokeShape>
                                     <Label
-                                        FontAttributes="Bold"
-                                        HorizontalOptions="Center"
-                                        Text="{Binding Price}"
-                                        TextColor="White"
-                                        VerticalOptions="Center" />
+                                FontAttributes="Bold"
+                                HorizontalOptions="Center"
+                                Text="{Binding Price}"
+                                TextColor="White"
+                                VerticalOptions="Center" />
                                 </Border>
                                 <Label
-                                    Grid.Row="2"
-                                    Padding="10,0,0,-2"
-                                    FontAttributes="Bold"
-                                    FontSize="17"
-                                    Text="{Binding Title}"
-                                    TextColor="Black" />
+                            Grid.Row="2"
+                            Padding="10,0,0,-2"
+                            FontAttributes="Bold"
+                            FontSize="17"
+                            Text="{Binding Title}"
+                            TextColor="Black" />
                                 <Label
-                                    Grid.Row="3"
-                                    Padding="10"
-                                    FontAttributes="Bold"
-                                    Text="{Binding Place}"
-                                    TextColor="Black" />
+                            Grid.Row="3"
+                            Padding="10"
+                            FontAttributes="Bold"
+                            Text="{Binding Place}"
+                            TextColor="Black" />
                             </Grid>
                         </Grid>
                     </Border>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
+        <!--#endregion-->
+        <!--#region Card-MountainClimbing-->
         <Grid Grid.Row="4" ColumnDefinitions=".75*,*" HeightRequest="100"
-              BackgroundColor="White"
-              Margin="35,0,0,0"
-              VerticalOptions="Center" 
-              ColumnSpacing="10">
+      BackgroundColor="White"
+      Margin="35,0,0,0"
+      VerticalOptions="Center" 
+      ColumnSpacing="10">
             <Border Margin="0,0,0,0" WidthRequest="210">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="12" />
@@ -167,57 +177,59 @@
                 </Grid>
             </Border>
             <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center"
-                                 Margin="0,20,-20,0">
+                         Margin="0,20,-20,0">
                 <Label Text="Mountain Climbing" 
-                            FontAttributes="Bold"
-                       FontSize="20"
-                       FontFamily="Regular"/>
+                    FontAttributes="Bold"
+               FontSize="20"
+               FontFamily="Regular"/>
                 <Grid ColumnDefinitions="*,*,*,*" Margin="-20,10,-20,0" HorizontalOptions="CenterAndExpand">
                     <Label Text="{StaticResource pin}"
-                           FontFamily="FAS"
-                           TextColor="#B33F40"
-                           FontSize="16"
-                           Margin="25,0"/>
-                    
+                   FontFamily="FAS"
+                   TextColor="#B33F40"
+                   FontSize="16"
+                   Margin="25,0"/>
+
                     <Label Text="Switzerland" Grid.Column="1"
-                           FontAttributes="Bold"
-                           FontFamily="Regular"
-                           TextColor="#424242"
-                           FontSize="16"
-                           Margin="-25,0,23,0"/>
-                    
+                   FontAttributes="Bold"
+                   FontFamily="Regular"
+                   TextColor="#424242"
+                   FontSize="16"
+                   Margin="-25,0,23,0"/>
+
                     <Label Text="{StaticResource star}" Grid.Column="2"
-                            FontFamily="FAS"
-                           FontSize="16"
-                           TextColor="#ffe234"
-                           Margin="5,0,2,0"/>
+                    FontFamily="FAS"
+                   FontSize="16"
+                   TextColor="#ffe234"
+                   Margin="5,0,2,0"/>
                     <Label Text="4.8" Grid.Column="3"
-                           Margin="0,0,10,0"/>
+                   Margin="0,0,10,0"/>
                 </Grid>
             </VerticalStackLayout>
         </Grid>
+        <!--#endregion-->
+        <!--#region Footer-->
         <Grid Grid.Row="5" Margin="15,5,15,0" RowDefinitions="*,*" ColumnDefinitions="*,*">
             <Label Text="Your Friends" 
-                   FontSize="20"
-                   FontFamily="Regular"
-                   FontAttributes="Bold"/>
+           FontSize="20"
+           FontFamily="Regular"
+           FontAttributes="Bold"/>
             <Grid ColumnDefinitions="*,*,*" Grid.Row="1" Margin="0,-10,0,0">
                 <Label Text="You have" 
-                       FontFamily="Regular"
-                       FontSize="16"
-                       TextColor="#424242"
-                       FontAttributes="Bold"/>
+               FontFamily="Regular"
+               FontSize="16"
+               TextColor="#424242"
+               FontAttributes="Bold"/>
                 <Label Text="{StaticResource group}"
-                       Grid.Column="1"
-                       FontFamily="FAS"
-                       TextColor="#009de0"
-                       FontSize="16"/>
+               Grid.Column="1"
+               FontFamily="FAS"
+               TextColor="#009de0"
+               FontSize="16"/>
                 <Label Text="25 Friends" Grid.Column="2"
-                       FontAttributes="Bold"
-                       FontFamily="Regular"
-                       TextColor="#424242"
-                       FontSize="16"
-                       Margin="-31,0,0,0"/>
+               FontAttributes="Bold"
+               FontFamily="Regular"
+               TextColor="#424242"
+               FontSize="16"
+               Margin="-31,0,0,0"/>
             </Grid>
             <StackLayout Grid.Column="1" Orientation="Horizontal" HorizontalOptions="End" Margin="0,0,-10,0">
                 <Frame CornerRadius="25" Padding="-5" Margin="0,0,-10,0" BorderColor="White">
@@ -228,10 +240,11 @@
                 </Frame>
                 <Frame CornerRadius="25" Padding="5" BackgroundColor="DarkOrange" BorderColor="White">
                     <Label Text="23+" FontSize="16" TextColor="Black"
-                           FontAttributes="Bold"
-                           VerticalOptions="Center"/>
+                   FontAttributes="Bold"
+                   VerticalOptions="Center"/>
                 </Frame>
             </StackLayout>
         </Grid>
+        <!--#endregion-->
     </Grid>
 </ContentPage>
