@@ -12,7 +12,7 @@ namespace TravelAppMaui.Pages
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync("//MainPage");
+            await Shell.Current.GoToAsync("//Third");
         }
     }
 }

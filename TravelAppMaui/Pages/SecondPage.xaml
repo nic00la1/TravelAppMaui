@@ -95,7 +95,11 @@
             BackgroundColor="#009de0" 
             Grid.Row="1"  
             Margin="0,0,30,10"
-            VerticalOptions="Center"/>
+            VerticalOptions="Center">
+                <Button.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Button.GestureRecognizers>
+            </Button>
         </Grid>
         <!--#endregion-->
         <!--#region Label-RecommendedPlaces -->

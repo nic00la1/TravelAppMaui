@@ -17,4 +17,9 @@
     ContentTemplate="{DataTemplate pages:SecondPage}"
     Route="Second" />
 
+    <ShellContent
+    Title="Home"
+    ContentTemplate="{DataTemplate pages:ThirdPage}"
+    Route="Third" />
+
 </Shell>
