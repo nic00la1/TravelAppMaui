@@ -9,16 +9,17 @@
 
 
     <VerticalStackLayout VerticalOptions="Center">
+        <!--#region CarouselVacationPlacesView-->
         <Grid RowDefinitions="*">
             <CarouselView ItemsSource="{Binding CarouselItems}" IndicatorView="indicatorView" Loop="False">
                 <CarouselView.ItemTemplate>
                     <DataTemplate x:DataType="viewmodel:CarouselItem">
                         <Grid RowDefinitions=".6*,.5*" RowSpacing="120">
                             <Border StrokeShape="RoundRectangle 40" 
-                                    WidthRequest="320"
-                                    HeightRequest="300" 
-                                    VerticalOptions="StartAndExpand"
-                                    HorizontalOptions="CenterAndExpand">
+                             WidthRequest="320"
+                             HeightRequest="300" 
+                             VerticalOptions="StartAndExpand"
+                             HorizontalOptions="CenterAndExpand">
                                 <Image Source="{Binding Image}"/>
                             </Border>
                         </Grid>
@@ -26,35 +27,40 @@
                 </CarouselView.ItemTemplate>
             </CarouselView>
         </Grid>
+        <!--#endregion-->
 
-        <!-- === IndicatorView === -->
+        <!--#region IndicatorView-->
         <IndicatorView x:Name="indicatorView"
-                VerticalOptions="CenterAndExpand"
-                HorizontalOptions="Center"
-                IndicatorColor="#d3d3d3"
-                IndicatorSize="9"
-                SelectedIndicatorColor="#009de0"
-                       Margin="20"/>
-
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="Center"
+                        IndicatorColor="#d3d3d3"
+                        IndicatorSize="9"
+                        SelectedIndicatorColor="#009de0"
+                        Margin="20"/>
+        <!--#endregion-->
+        
+        <!--#region Label-Vacation-And-Button-->
         <Label Text="Planning Your Next Vacation"
-               HorizontalOptions="CenterAndExpand"
-               FontSize="53"
-               FontFamily="Regular"
-               FontAttributes="Bold"
-               Margin="68,20"/>
+                HorizontalOptions="CenterAndExpand"
+                FontSize="53"
+                FontFamily="Regular"
+                FontAttributes="Bold"
+                Margin="68,20"/>
 
 
         <Button Text="Explore now!"
-                HorizontalOptions="Center"
-                Padding="25, 10"
-                FontFamily="Regular"
-                FontSize="Medium"
-                BackgroundColor="#009de0"
-                Margin="0,60">
+                 HorizontalOptions="Center"
+                 Padding="25, 10"
+                 FontFamily="Regular"
+                 FontSize="Medium"
+                 BackgroundColor="#009de0"
+                 Margin="0,60">
             <Button.GestureRecognizers>
                 <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
             </Button.GestureRecognizers>
         </Button>
+        <!--#endregion-->
+
     </VerticalStackLayout>
 
     
