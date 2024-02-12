@@ -4,7 +4,7 @@
              x:Class="TravelAppMaui.Pages.ThirdPage"
              Title="ThirdPage"
              Shell.NavBarIsVisible="False">
-    <Grid RowDefinitions="*,*" RowSpacing="-100">
+    <Grid RowDefinitions=".7*,*" RowSpacing="-100">
         <Image Source="camping_boat.jpg" Aspect="AspectFill"/>
         <Border Grid.Row="1" StrokeShape="RoundRectangle 50,50,0,0" BackgroundColor="White">
             <Grid >
