@@ -16,7 +16,7 @@
     <Grid RowDefinitions=".7*,*" RowSpacing="-100">
         <Image Source="camping_boat.jpg" Aspect="AspectFill"/>
         <Border Grid.Row="1" StrokeShape="RoundRectangle 50,50,0,0" BackgroundColor="White">
-            <Grid RowDefinitions=".05*, .2*, .3*, .1*, .25*, .1*, .4*">
+            <Grid RowDefinitions=".05*, .2*, .3*, .1*, .25*, .4*">
                 <!--#region Header-->
                 <VerticalStackLayout Margin="20,10" >
                     <!--#region Ala-Wysuwany-Sheep-->
@@ -70,8 +70,8 @@
                    
                 </Grid>
                 <!--#endregion-->
-                <!--#region Description-->
-                <VerticalStackLayout Grid.Row="3" Margin="20,5">
+                <!--#region About-->
+                <VerticalStackLayout Grid.Row="3" Margin="20,0">
                     <Label Text="About"
                            FontSize="30"
                            FontFamily="Regular"
@@ -89,7 +89,34 @@
                     </Label>
                 </VerticalStackLayout>
                 <!--#endregion-->
+                <!--#region GalleryText-->
+                <Grid Grid.Row="4" VerticalOptions="End" Margin="20,0">
+                    <Label Text="Gallery"
+                           FontSize="30"
+                           FontFamily="Regular"
+                           FontAttributes="Bold"/>
+                </Grid>
+                <!--#endregion-->
                 
+                <!--#region Gallery-->
+                <Grid Grid.Row="5">
+                    
+                    <StackLayout Grid.Row="5" Orientation="Horizontal" Spacing="10">
+                        <Border StrokeShape="RoundRectangle 10">
+                            <Image Source="paris.jpg" WidthRequest="120"
+                                   Aspect="AspectFill"/>
+                        </Border>
+                        <Border StrokeShape="RoundRectangle 10">
+                            <Image Source="horizontal_view.png" WidthRequest="120" 
+                                   Aspect="AspectFill"/>
+                        </Border>
+                        <Border StrokeShape="RoundRectangle 10">
+                            <Image Source="castle.png" WidthRequest="120"
+                                   Aspect="AspectFill"/>
+                        </Border>
+                    </StackLayout>
+                </Grid>
+                <!--#endregion-->
             </Grid>
         </Border>
     </Grid>
