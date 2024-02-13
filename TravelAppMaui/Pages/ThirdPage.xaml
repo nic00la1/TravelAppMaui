@@ -23,8 +23,12 @@
             FontFamily="Regular"
             FontSize="30"
             VerticalOptions="Center"
-            BackgroundColor="Red"
-            TextColor="Black"/>
+            BackgroundColor="#009de0"
+                    Margin="5"
+                    Opacity=".8"
+            TextColor="#ffe234">
+                
+            </Button>
         </Grid>
         <Border Grid.Row="1" StrokeShape="RoundRectangle 50,50,0,0" BackgroundColor="White">
             <Grid RowDefinitions=".05*, .2*, .3*, .1*, .25*, .3*">
