@@ -109,8 +109,15 @@
                                    Aspect="AspectFill"/>
                         </Border>
                         <Border StrokeShape="RoundRectangle 10">
-                            <Image Source="castle.png" WidthRequest="110"
-                                   Aspect="AspectFill"/>
+                            <Grid>
+                                <Image Source="castle.png" WidthRequest="110"
+                                       Aspect="AspectFill"/>
+                                <BoxView Color="#80000000" IsVisible="True" Opacity="0.7"/>
+                                <!-- Przyciemniona nakładka -->
+                                <Label Text="+10" VerticalOptions="Center" HorizontalOptions="Center"
+                                       TextColor="White" FontSize="Title"
+                                       />
+                            </Grid>
                         </Border>
                     </StackLayout>
                 </Grid>
