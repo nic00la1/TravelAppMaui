@@ -61,6 +61,16 @@
                    
                 </VerticalStackLayout>
                 <!--#endregion-->
+                <!--#region Main-->
+                <Grid Grid.Row="2">
+                    <Border Padding="-100" Margin="15"
+                            StrokeShape="RoundRectangle 10">
+                        <Image Source="map.png" HorizontalOptions="Center"/>
+                    </Border>
+                   
+                </Grid>
+                <!--#endregion-->
+                
             </Grid>
         </Border>
     </Grid>
