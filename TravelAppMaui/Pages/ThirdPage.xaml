@@ -27,7 +27,9 @@
                     Margin="5"
                     Opacity=".8"
             TextColor="#ffe234">
-                
+                <Button.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Button.GestureRecognizers>
             </Button>
         </Grid>
         <Border Grid.Row="1" StrokeShape="RoundRectangle 50,50,0,0" BackgroundColor="White">

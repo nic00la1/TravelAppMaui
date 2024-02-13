@@ -6,4 +6,9 @@ public partial class ThirdPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("//Second");
+    }
 }
