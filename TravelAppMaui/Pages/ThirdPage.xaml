@@ -12,9 +12,20 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <!--#endregion-->
-    
+
     <Grid RowDefinitions=".7*,*" RowSpacing="-100">
         <Image Source="camping_boat.jpg" Aspect="AspectFill"/>
+        <Grid VerticalOptions="Start"
+      HorizontalOptions="End">
+            <!-- Align the grid to the right -->
+
+            <Button Text="Back" 
+            FontFamily="Regular"
+            FontSize="30"
+            VerticalOptions="Center"
+            BackgroundColor="Red"
+            TextColor="Black"/>
+        </Grid>
         <Border Grid.Row="1" StrokeShape="RoundRectangle 50,50,0,0" BackgroundColor="White">
             <Grid RowDefinitions=".05*, .2*, .3*, .1*, .25*, .3*">
                 <!--#region Header-->
