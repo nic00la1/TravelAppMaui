@@ -61,14 +61,33 @@
                    
                 </VerticalStackLayout>
                 <!--#endregion-->
-                <!--#region Main-->
+                <!--#region Map-->
                 <Grid Grid.Row="2">
-                    <Border Padding="-100" Margin="15"
+                    <Border Padding="-100" Margin="20,10,20,10"
                             StrokeShape="RoundRectangle 10">
                         <Image Source="map.png" HorizontalOptions="Center"/>
                     </Border>
                    
                 </Grid>
+                <!--#endregion-->
+                <!--#region Description-->
+                <VerticalStackLayout Grid.Row="3" Margin="20,5">
+                    <Label Text="About"
+                           FontSize="30"
+                           FontFamily="Regular"
+                           FontAttributes="Bold"/>
+                    <Label Text="Experience the thrill of boat camping with us, where adventure meets relaxation on the water, and let the waves carry you to new horizons."
+                           Margin="0,5,0,0"
+                           FontSize="16">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Experience the thrill of boat camping with us, where adventure meets relaxation on the water, and let the waves carry you to " TextColor="Black"/>
+                                <Span Text="new horizons." TextColor="Orange"
+                                      FontAttributes="Bold"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </VerticalStackLayout>
                 <!--#endregion-->
                 
             </Grid>
